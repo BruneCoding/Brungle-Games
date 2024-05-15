@@ -1,0 +1,140 @@
+<style>
+  button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+  body {
+    background: black;
+  }
+    .card video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png');
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #d1d1d1;
+    filter: blur(1.5px);
+    opacity: 0.75;
+  }
+  .card:hover {
+    box-shadow: 0 0 400px #dcdcdc;
+    transform: scale(1.025);
+    border: 2px solid white;
+    filter: blur(0px);
+        opacity: 1;
+  }
+  
+  .card:hover .card img {
+    src="https://cdn.theatlantic.com/media/mt/science/ellipse.gif";
+  }
+
+  .card img {
+    width: 250px;
+  }
+
+  h1 {
+    display: none;
+    color: #d1d1d1;
+    position: relative;
+    z-index: 3;
+    font-family: monospace;
+    font-size: 1.5rem;
+  }
+
+  .up {
+    animation: upAnimation 0.5s ease-in-out both;
+  }
+
+  @keyframes upAnimation {
+    from {
+      transform: translateY(10vh);
+    }
+    to {
+      transform: translateY(-6vh);
+    }
+  }
+</style>
+<button onclick="chess()">
+<div class="card">
+  <video autoplay loop muted>
+    <source src="https://v.poki.com/1eedb37c-7501-41e1-9b24-62f1bc6bc87c/thumbnail.3x3.vp9.mp4" type="video/mp4">
+    Your browser does not support the video tag. L
+  </video>
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png" alt="Swastik game">
+  <h1>Chess</h1>
+  <br>
+</div>
+</button>
+
+
+<div class="card">
+  <video autoplay loop muted>
+    <source src="https://v.poki.com/1eedb37c-7501-41e1-9b24-62f1bc6bc87c/thumbnail.3x3.vp9.mp4" type="video/mp4">
+    Your browser does not support the video tag. L
+  </video>
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png" alt="Swastik game">
+  <h1>Placeholder</h1>
+</div>
+<div class="card">
+  <video autoplay loop muted>
+    <source src="https://v.poki.com/1eedb37c-7501-41e1-9b24-62f1bc6bc87c/thumbnail.3x3.vp9.mp4" type="video/mp4">
+    Your browser does not support the video tag. L
+  </video>
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png" alt="Swastik game">
+  <h1>Placeholder</h1>
+</div>
+<div class="card">
+  <video autoplay loop muted>
+    <source src="https://v.poki.com/1eedb37c-7501-41e1-9b24-62f1bc6bc87c/thumbnail.3x3.vp9.mp4" type="video/mp4">
+    Your browser does not support the video tag. L
+  </video>
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png" alt="Swastik game">
+  <h1>Placeholder</h1>
+</div>
+<div class="card">
+  <video autoplay loop muted>
+    <source src="https://v.poki.com/1eedb37c-7501-41e1-9b24-62f1bc6bc87c/thumbnail.3x3.vp9.mp4" type="video/mp4">
+    Your browser does not support the video tag. L
+  </video>
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/c4e0bc973542169af2adfea2fa68281f.png" alt="Swastik game">
+  <h1>Placeholder</h1>
+</div>
+
+<script>
+document.querySelectorAll('.card').forEach(card => {
+    const h1 = card.querySelector('h1');
+    const video = card.querySelector('video');
+
+    card.addEventListener('mouseenter', () => {
+      h1.style.display = 'block';
+      h1.classList.add('up');
+      video.style.display = 'block';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      h1.style.display = 'none';
+      h1.classList.remove('up');
+      video.style.display = 'none';
+    });
+  });
+  
+  function chess() {
+    window.location.href = "https://chess-games-brungle.pages.dev/";
+  }
+</script>
